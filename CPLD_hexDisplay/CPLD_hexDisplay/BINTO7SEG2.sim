@@ -1,0 +1,60 @@
+%SIGNAL
+PIN   4 =  d0 
+PIN   5 =  d1 
+PIN   6 =  d2 
+PIN   8 =  d3 
+PIN  18 =  sega 
+PIN  19 =  segb 
+PIN  20 =  segc 
+PIN  21 =  segd 
+PIN  24 =  sege 
+PIN  25 =  segf 
+PIN  26 =  segg 
+%END
+
+%FIELD
+FIELD input_bin = d3,d2,d1,d0
+FIELD output_seg = sega,segb,segc,segd,sege,segf,segg
+%END
+
+%EQUATION
+sega =>
+    d0 & !d1 & d2 & d3
+  # d0 & d1 & !d2 & d3
+  # !d0 & !d1 & d2 & !d3
+  # d0 & !d1 & !d2 & !d3
+
+segb =>
+    !d0 & d1 & d2
+  # d0 & d1 & d3
+  # !d0 & d2 & d3
+  # d0 & !d1 & d2 & !d3
+
+segc =>
+    !d0 & d2 & d3
+  # d1 & d2 & d3
+  # !d0 & d1 & !d2 & !d3
+
+segd =>
+    d0 & d1 & d2
+  # !d0 & d1 & !d2 & d3
+  # !d0 & !d1 & d2 & !d3
+  # d0 & !d1 & !d2 & !d3
+
+sege =>
+    d0 & !d3
+  # d0 & !d1 & !d2
+  # !d1 & d2 & !d3
+
+segf =>
+    d0 & d1 & !d3
+  # d0 & !d2 & !d3
+  # d1 & !d2 & !d3
+  # d0 & !d1 & d2 & d3
+
+segg =>
+    !d1 & !d2 & !d3
+  # !d0 & !d1 & d2 & d3
+  # d0 & d1 & d2 & !d3
+
+%END

@@ -1,0 +1,46 @@
+Name     binTo7Seg ;
+PartNo   00 ;
+Date     1/2/2019 ;
+Revision 01 ;
+Designer Engineer ;
+Company  ppol42 ;
+Assembly None ;
+Location  ;
+Device   f1504ispplcc44 ;
+
+/* *************** INPUT PINS *********************/
+PIN  4   =   d0                      ; /*                                 */ 
+PIN  5   =   d1                      ; /*                                 */ 
+PIN  6   =   d2                      ; /*                                 */ 
+PIN  8   =   d3                      ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN  18   = sega                         ; /*                                 */ 
+PIN  19   = segb                         ; /*                                 */ 
+PIN  20   = segc                        ; /*                                 */ 
+PIN  21   = segd                       ; /*                                 */ 
+PIN  24   = sege                        ; /*                                 */ 
+PIN  25   = segf                        ; /*                                 */ 
+PIN  26   = segg                        ; /*                                 */ 
+
+FIELD input_bin=[d3,d2,d1,d0];
+FIELD output_seg=[sega,segb,segc,segd,sege,segf,segg];
+TABLE input_bin=>output_seg {
+'b'0000 => 'b'0000001;
+'b'0001 => 'b'1001111;
+'b'0010 => 'b'0010010;
+'b'0011 => 'b'0000110;
+'b'0100 => 'b'1001100;
+'b'0101 => 'b'0100100;
+'b'0110 => 'b'0100000;
+'b'0111 => 'b'0001111;
+'b'1000 => 'b'0000000;
+'b'1001 => 'b'0000100;
+'b'1010 => 'b'0001000;
+'b'1011 => 'b'1100000;
+'b'1100 => 'b'0110001;
+'b'1101 => 'b'1000010;
+'b'1110 => 'b'0110000;
+'b'1111 => 'b'0111000;
+}
+

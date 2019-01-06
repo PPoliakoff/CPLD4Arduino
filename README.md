@@ -20,18 +20,23 @@ I have selected the ATMEL (Microchip) [ATF1504AS](https://www.microchip.com/wwwp
 In addition to you usual Arduino setup, to make the projects described in this tutorial you need the following :
 
 ### Hardware
-* the CPLD [ATF1504AS](https://www.microchip.com/wwwproducts/en/ATf1504as) (manufactured by microchip available from Mouser, Digikey,RS...)
+
+* The CPLD [ATF1504AS](https://www.microchip.com/wwwproducts/en/ATf1504as) (manufactured by microchip)
 ![ATF1504AS image](/images/ATF1504AS.jpg)
-* the programmer [ATDH1150USB](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=ATDH1150USB ) (manufactured by microchip or kanda and available from mouser,kanda,digikey
+
+* The programmer [ATDH1150USB](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=ATDH1150USB ) (manufactured by microchip or kanda)
 ![ATDH1150USB image](/images/ATDH1150USB.jpg)
-* an adpater PLCC44 to DIP
+
+* An adpater PLCC44 to DIP                          
 ![PLCC44 image](/images/PLCC.jpg)
-* an adpater 10 pin header for breadboard
+
+* An adpater 10 pin header for breadboard (home made)           
 ![HeaderAdapter image](/images/HeaderAdapter.jpg)
-* a PLCC Extractor tool
+
+* A PLCC Extractor tool          
 ![Extractor image](/images/Extractor.jpg)
 
-I selected those parts because they are all easy to find, you should have have no problem to obtain them from the usual distributors (Mouser, digikey,Farnell,...)
+I selected those parts because they are all easy to find, you should have have no problem to obtain them from the usual distributors (Mouser, Digikey,Farnell,...)
 The only exception is the 10 pin header adapter. But this one is very easy to build
 
 
@@ -54,13 +59,15 @@ Those softwares are both very old but I had not too many problems to make them r
 
 ## Put all together
 
+Note: you must connect both the Arduino and the ATDH1150USB probgrammer to PC USB ports. The Arduino is needed to provide 5V to the CPLD!
+
 ![ProgSetup1 image](/images/ProgSetup1.jpg)
 
 ![ProgSetup2 image](/images/ProgSetup2.jpg)
 
 
 ## tutorials
-- [x] 7 segment display
+- [x] [7 segment display](/CPLD_hexDisplay)
 - [ ] multiplexed 7 segment display (still to be written)
 - [ ] Multiple pulse generator (still to be written)
 - [ ] Video generator (still to be written)
