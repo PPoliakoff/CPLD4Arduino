@@ -59,15 +59,22 @@ Those softwares are both very old but I had not too many problems to make them r
 
 ## Put all together
 
-Note: you must connect both the Arduino and the ATDH1150USB probgrammer to PC USB ports. The Arduino is needed to provide 5V to the CPLD!
+Note : you must connect both the Arduino and the ATDH1150USB probgrammer to PC USB ports. The Arduino is only used to provide 5V to the CPLD.
 
-![ProgSetup1 image](/images/ProgSetup1.jpg)
+I have added a LED to indicate the presence of power
 
-![ProgSetup2 image](/images/ProgSetup2.jpg)
+This is the schematics (the kicad file of this drawing is avaialable [here](/kicad/introduction)).
+![ProgSetup1 image](/images/ProgSetup1.png)
 
+![ProgSetup2 image](/images/ProgSetup2.png)
+
+Important: the pin 1 of the JTAG flat cable is identified by the red wire in the flat cable
+
+![ProgSetup3 image](/images/ProgSetup3.jpg)
 
 ## tutorials
 - [x] [7 segment display](/CPLD_hexDisplay)
+- [ ] Counter
 - [ ] multiplexed 7 segment display (still to be written)
 - [ ] Multiple pulse generator (still to be written)
 - [ ] Video generator (still to be written)
