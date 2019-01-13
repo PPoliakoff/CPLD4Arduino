@@ -1,0 +1,70 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sat Jan 12 23:30:10 2019
+
+LISTING FOR SIMULATION FILE: CPLD_HEXCOUNTER.si
+
+   1: Name     hexcounter;
+                         ^
+[0025sa] Please note: inconsistent header information
+
+   2: PartNo   00;
+   3: Date     1/12/2019;
+   4: Revision 01;
+   5: Designer Engineer;
+   6: Company  ppol42;
+   7: Assembly None;
+   8: Location ;
+   9: Device   f1504ispplcc44;
+  10: 
+  11: 
+  12: FIELD count_bin = [Q3,Q2,Q1,Q0];
+  13: FIELD output_seg = [sega,segb,segc,segd,sege,segf,segg];
+  14:
+  15: ORDER: clk, d0, Q0, Q1, Q2, Q3, sega, segb, segc, segd, segf, sege, segg; 
+  16: 
+  17: 
+
+======================
+            sssssss   
+      c     eeeeeee   
+      ldQQQQggggggg   
+      k00123abcdfeg   
+======================
+0001: 00LLLLLLLLLLH
+0002: 10HLLLHLLHHHH
+0003: 00HLLLHLLHHHH
+0004: 10LHLLLLHLHLL
+0005: 00LHLLLLHLHLL
+0006: 10HHLLLLLLHHL
+0007: 00HHLLLLLLHHL
+0008: 10LLHLHLLHLHL
+0009: 00LLHLHLLHLHL
+0010: 10HLHLLHLLLHL
+0011: 00HLHLLHLLLHL
+0012: 10LHHLLHLLLLL
+0013: 00LHHLLHLLLLL
+0014: 10HHHLLLLHHHH
+0015: 00HHHLLLLHHHH
+0016: 10LLLHLLLLLLL
+0017: 00LLLHLLLLLLL
+0018: 10HLLHLLLLLHL
+0019: 00HLLHLLLLLHL
+0020: 10LHLHLLLHLLL
+0021: 00LHLHLLLHLLL
+0022: 10HHLHHHLLLLL
+0023: 00HHLHHHLLLLL
+0024: 10LLHHLHHLLLH
+0025: 00LLHHLHHLLLH
+0026: 10HLHHHLLLHLL
+0027: 00HLHHHLLLHLL
+0028: 10LHHHLHHLLLL
+0029: 00LHHHLHHLLLL
+0030: 10HHHHLHHHLLL
+0031: 00HHHHLHHHLLL
+0032: 10LLLLLLLLLLH
+0033: 00LLLLLLLLLLH
+0034: 10HLLLHLLHHHH
+0035: 00HLLLHLLHHHH
+0036: 01LLLLLLLLLLH

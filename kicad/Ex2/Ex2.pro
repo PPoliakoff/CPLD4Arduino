@@ -1,4 +1,4 @@
-update=1/12/2019 8:56:51 PM
+update=1/13/2019 12:59:21 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,6 +58,6 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=E:/kicad/gioziro95/kicad-library/eeschema/misc_giogziro95
-LibName31=D:/MyElectronics/Arduino/CPLD4Arduino/kicad/library/CPLD4Arduino
-LibName32=D:/deleteme/display7447/displayDeleteMe
+LibName30=D:/MyElectronics/Arduino/CPLD4Arduino/kicad/library/CPLD4Arduino
+LibName31=E:/kicad/gioziro95/kicad-library/eeschema/misc_giogziro95
+LibName32=C:/Program Files/KiCad/share/kicad/library/switches

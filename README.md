@@ -73,8 +73,10 @@ Important: the pin 1 of the JTAG flat cable is identified by the red wire in the
 ![ProgSetup3 image](/images/ProgSetup3.jpg)
 
 ## tutorials
-- [x] [7 segment display](/CPLD_hexDisplay)
-- [ ] Counter
+- [x] [Example 1 : 7 segment display](/EX1_CPLD_hexDisplay)
+- [x] [Example 2 : Hexadecimal Counter](/EX2_CPLD_hexCounter)
 - [ ] multiplexed 7 segment display (still to be written)
+- [ ] Serial to Parrallel shift register (still to be written)
 - [ ] Multiple pulse generator (still to be written)
+- [ ] Serial RAM access (still to be written)
 - [ ] Video generator (still to be written)

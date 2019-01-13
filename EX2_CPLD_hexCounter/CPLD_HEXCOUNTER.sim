@@ -1,0 +1,104 @@
+%SIGNAL
+PIN  90 =  Q0 
+PIN  91 =  Q1 
+PIN  92 =  Q2 
+PIN  93 =  Q3 
+PIN  43 =  clk 
+PIN   4 =  d0 
+PIN  18 =  sega 
+PIN  19 =  segb 
+PIN  20 =  segc 
+PIN  21 =  segd 
+PIN  24 =  sege 
+PIN  25 =  segf 
+PIN  26 =  segg 
+%END
+
+%FIELD
+FIELD count_bin = Q3,Q2,Q1,Q0
+FIELD output_seg = sega,segb,segc,segd,sege,segf,segg
+%END
+
+%EQUATION
+Q0.d  =>
+    !Q0
+
+Q0.ar  =>
+    d0
+
+Q0.ck  =>
+    clk
+
+Q1.d  =>
+    !Q0 & Q1
+  # Q0 & !Q1
+
+Q1.ar  =>
+    d0
+
+Q1.ck  =>
+    clk
+
+Q2.d  =>
+    !Q0 & Q2
+  # !Q1 & Q2
+  # Q0 & Q1 & !Q2
+
+Q2.ar  =>
+    d0
+
+Q2.ck  =>
+    clk
+
+Q3.d  =>
+    !Q0 & Q3
+  # !Q1 & Q3
+  # !Q2 & Q3
+  # Q0 & Q1 & Q2 & !Q3
+
+Q3.ar  =>
+    d0
+
+Q3.ck  =>
+    clk
+
+sega =>
+    Q0 & !Q1 & Q2 & Q3
+  # Q0 & Q1 & !Q2 & Q3
+  # !Q0 & !Q1 & Q2 & !Q3
+  # Q0 & !Q1 & !Q2 & !Q3
+
+segb =>
+    !Q0 & Q1 & Q2
+  # Q0 & Q1 & Q3
+  # !Q0 & Q2 & Q3
+  # Q0 & !Q1 & Q2 & !Q3
+
+segc =>
+    !Q0 & Q2 & Q3
+  # Q1 & Q2 & Q3
+  # !Q0 & Q1 & !Q2 & !Q3
+
+segd =>
+    Q0 & Q1 & Q2
+  # !Q0 & Q1 & !Q2 & Q3
+  # !Q0 & !Q1 & Q2 & !Q3
+  # Q0 & !Q1 & !Q2 & !Q3
+
+sege =>
+    Q0 & !Q3
+  # Q0 & !Q1 & !Q2
+  # !Q1 & Q2 & !Q3
+
+segf =>
+    Q0 & Q1 & !Q3
+  # Q0 & !Q2 & !Q3
+  # Q1 & !Q2 & !Q3
+  # Q0 & !Q1 & Q2 & Q3
+
+segg =>
+    !Q1 & !Q2 & !Q3
+  # !Q0 & !Q1 & Q2 & Q3
+  # Q0 & Q1 & Q2 & !Q3
+
+%END

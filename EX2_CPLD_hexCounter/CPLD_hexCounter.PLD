@@ -1,0 +1,74 @@
+Name     binTo7Seg ;
+PartNo   00 ;
+Date     1/12/2019 ;
+Revision 01 ;
+Designer Engineer ;
+Company  ppol42 ;
+Assembly None ;
+Location  ;
+Device   f1504ispplcc44 ;
+
+/* *************** INPUT PINS *********************/
+PIN  4   =   d0  ;
+PIN  43  =   clk ;
+/* *************** OUTPUT PINS *********************/
+PIN  18   = sega ;
+PIN  19   = segb ;
+PIN  20   = segc ;
+PIN  21   = segd ;
+PIN  24   = sege ;
+PIN  25   = segf ;
+PIN  26   = segg ;
+
+PINNODE 90 =Q0;
+PINNODE 91 =Q1;
+PINNODE 92 =Q2;
+PINNODE 93 =Q3;
+
+FIELD count_bin=[Q3..0];
+FIELD output_seg=[sega,segb,segc,segd,sege,segf,segg];
+
+[Q0..3].ck=clk;
+[Q0..3].ar=d0;
+
+SEQUENCE count_bin {
+
+present 'h'0 next 'h'1;
+present 'h'1 next 'h'2;
+present 'h'2 next 'h'3;
+present 'h'3 next 'h'4;
+present 'h'4 next 'h'5;
+present 'h'5 next 'h'6;
+present 'h'6 next 'h'7;
+present 'h'7 next 'h'8;
+present 'h'8 next 'h'9;
+present 'h'9 next 'h'A;
+present 'h'A next 'h'B;
+present 'h'B next 'h'C;
+present 'h'C next 'h'D;
+present 'h'D next 'h'E;
+present 'h'E next 'h'F;
+present 'h'F next 'h'0;
+
+}
+
+
+TABLE count_bin=>output_seg {
+'b'0000 => 'b'0000001;
+'b'0001 => 'b'1001111;
+'b'0010 => 'b'0010010;
+'b'0011 => 'b'0000110;
+'b'0100 => 'b'1001100;
+'b'0101 => 'b'0100100;
+'b'0110 => 'b'0100000;
+'b'0111 => 'b'0001111;
+'b'1000 => 'b'0000000;
+'b'1001 => 'b'0000100;
+'b'1010 => 'b'0001000;
+'b'1011 => 'b'1100000;
+'b'1100 => 'b'0110001;
+'b'1101 => 'b'1000010;
+'b'1110 => 'b'0110000;
+'b'1111 => 'b'0111000;
+}
+

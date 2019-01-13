@@ -24,10 +24,10 @@ The Segemnts pinout vary from one manufacturer to another. Please check your dat
 ![Ex1Photo image](/images/Ex1Photo.jpg)
 ## Programming the CPLD
 
-The [.PLD File](/EX1_CPLD_hexDisplay/BINTO7SEG2.PLD) is divided in 3 parts:
+The [.PLD File](/EX1_CPLD_hexDisplay/CPLD_hexDisplay.PLD) is divided in 3 parts:
 The introduction, the Pin declaration, and the implementation
 
-### The introduction
+### The header
 
 This part is automatically created by the wincupl editor.
 All the fields are straigh forward to fill (and their value is not really important)
@@ -98,7 +98,7 @@ We could implement that by explicitely writing the logic equeations using the lo
 | NOT | ! | u = !a; |
 | AND | & | u = a & b; |
 | OR | # | u = a # b; |
-| XOR | $ | u= a$ b; |
+| XOR | $ | u= a $ b; |
 
 We can then write the equation for each segment
 
@@ -107,7 +107,7 @@ For instance for the G segment we can write
 segg =>   ( !d1 & !d2 & !d3 ) # (!d0 & !d1 & d2 & d3) # (d0 & d1 & d2 & !d3) ;
 ```
 
-But having to write 7 such equations is not really funny and could lead to hard to find errors.
+But having to write 7 such equations is not funny and could lead to hard to find errors.
 However CUPL offers a way to directly implement directly the table mapping the input binary values to the output.
 
 To do that you first declare the input and output verctors (aka FIELDS)
@@ -139,7 +139,7 @@ TABLE input_bin=>output_seg {
 ```
 
 
-## The arduino program
+## The Arduino Program
 
 The Arduino program is a simple counter that output its value on the pins D2,D3,D4,D5
 (we avoid to use the pins D0, and d1 because they are reserved for the serial communication)
