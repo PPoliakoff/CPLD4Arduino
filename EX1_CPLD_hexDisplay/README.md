@@ -15,7 +15,7 @@ Note: the pin numbers are the one I did choose on the CPLD.
 
 We want the arduino to output a binary number, the CPLD to decode it and the 7 segment LED device to display it
 
-![Ex1_Schematics image](/images/Ex1_Schematics.png)
+![Ex1_Schematics image](/images/Ex1_schematics.png)
 
 The Segemnts pinout vary from one manufacturer to another. Please check your datasheet to know which one is applicable for your device. It may not be the same as mine.
 

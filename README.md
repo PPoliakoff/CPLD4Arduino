@@ -49,6 +49,8 @@ To activate WINCUPL you need to use the serial number provided on the web page (
 
 Those softwares are both very old but I had not too many problems to make them run on Windows 10 64bits. After installing ATMISP I had a systematic error "FTD2XX.dll was not found" apparently this problem is well known on WIN64 computers. The solution is to move de FTD2XX.dll file in the Windows directory. 
 
+Also Since they are very old programs they do not support correctly long file names. You should give your .PLD file names of max 8 characters otherwise you could end up with the mysterious error " Automation error The object invoked has disconnected from its clients"
+
 ## Building the 10 Pin Header
 
 ![HeaderStep1 image](/images/HeaderStep1.jpg)
@@ -75,8 +77,9 @@ Important: the pin 1 of the JTAG flat cable is identified by the red wire in the
 ## tutorials
 - [x] [Example 1 : 7 segment display](/EX1_CPLD_hexDisplay)
 - [x] [Example 2 : Hexadecimal Counter](/EX2_CPLD_hexCounter)
+- [ ] [Serial to Parallel shift register](/EX3_CLPD_shiftregister)
 - [ ] multiplexed 7 segment display (still to be written)
-- [ ] Serial to Parrallel shift register (still to be written)
+- [ ] keyboard decoder (still to be written)
 - [ ] Multiple pulse generator (still to be written)
 - [ ] Serial RAM access (still to be written)
 - [ ] Video generator (still to be written)

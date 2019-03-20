@@ -1,0 +1,403 @@
+%SIGNAL
+PIN   2 =  clock 
+PIN 600 =  d0 
+PIN 601 =  d1 
+PIN 602 =  d2 
+PIN 603 =  d3 
+PIN 604 =  d4 
+PIN 605 =  d5 
+PIN 606 =  d6 
+PIN 607 =  d7 
+PIN 608 =  d8 
+PIN 609 =  d9 
+PIN 610 =  d10 
+PIN 611 =  d11 
+PIN 612 =  d12 
+PIN 613 =  d13 
+PIN 614 =  d14 
+PIN 615 =  d15 
+PIN 616 =  d16 
+PIN 617 =  d17 
+PIN 618 =  d18 
+PIN 619 =  d19 
+PIN 620 =  d20 
+PIN 621 =  d21 
+PIN 622 =  d22 
+PIN 623 =  d23 
+PIN 624 =  d24 
+PIN 625 =  d25 
+PIN 626 =  d26 
+PIN 627 =  d27 
+PIN   1 =  data 
+PIN  43 =  load 
+PIN   4 =  q0 
+PIN   5 =  q1 
+PIN   6 =  q2 
+PIN   8 =  q3 
+PIN   9 =  q4 
+PIN  11 =  q5 
+PIN  12 =  q6 
+PIN  14 =  q7 
+PIN  16 =  q8 
+PIN  17 =  q9 
+PIN  18 =  q10 
+PIN  19 =  q11 
+PIN  20 =  q12 
+PIN  21 =  q13 
+PIN  24 =  q14 
+PIN  25 =  q15 
+PIN  26 =  q16 
+PIN  27 =  q17 
+PIN  28 =  q18 
+PIN  29 =  q19 
+PIN  31 =  q20 
+PIN  33 =  q21 
+PIN  34 =  q22 
+PIN  36 =  q23 
+PIN  37 =  q24 
+PIN  39 =  q25 
+PIN  40 =  q26 
+PIN  41 =  q27 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+d0.d  =>
+    data
+
+d0.ck  =>
+    clock
+
+d1.d  =>
+    d0
+
+d1.ck  =>
+    clock
+
+d2.d  =>
+    d1
+
+d2.ck  =>
+    clock
+
+d3.d  =>
+    d2
+
+d3.ck  =>
+    clock
+
+d4.d  =>
+    d3
+
+d4.ck  =>
+    clock
+
+d5.d  =>
+    d4
+
+d5.ck  =>
+    clock
+
+d6.d  =>
+    d5
+
+d6.ck  =>
+    clock
+
+d7.d  =>
+    d6
+
+d7.ck  =>
+    clock
+
+d8.d  =>
+    d7
+
+d8.ck  =>
+    clock
+
+d9.d  =>
+    d8
+
+d9.ck  =>
+    clock
+
+d10.d  =>
+    d9
+
+d10.ck  =>
+    clock
+
+d11.d  =>
+    d10
+
+d11.ck  =>
+    clock
+
+d12.d  =>
+    d11
+
+d12.ck  =>
+    clock
+
+d13.d  =>
+    d12
+
+d13.ck  =>
+    clock
+
+d14.d  =>
+    d13
+
+d14.ck  =>
+    clock
+
+d15.d  =>
+    d14
+
+d15.ck  =>
+    clock
+
+d16.d  =>
+    d15
+
+d16.ck  =>
+    clock
+
+d17.d  =>
+    d16
+
+d17.ck  =>
+    clock
+
+d18.d  =>
+    d17
+
+d18.ck  =>
+    clock
+
+d19.d  =>
+    d18
+
+d19.ck  =>
+    clock
+
+d20.d  =>
+    d19
+
+d20.ck  =>
+    clock
+
+d21.d  =>
+    d20
+
+d21.ck  =>
+    clock
+
+d22.d  =>
+    d21
+
+d22.ck  =>
+    clock
+
+d23.d  =>
+    d22
+
+d23.ck  =>
+    clock
+
+d24.d  =>
+    d23
+
+d24.ck  =>
+    clock
+
+d25.d  =>
+    d24
+
+d25.ck  =>
+    clock
+
+d26.d  =>
+    d25
+
+d26.ck  =>
+    clock
+
+d27.d  =>
+    d26
+
+d27.ck  =>
+    clock
+
+q0.d  =>
+    d0
+
+q0.ck  =>
+    load
+
+q1.d  =>
+    d1
+
+q1.ck  =>
+    load
+
+q2.d  =>
+    d2
+
+q2.ck  =>
+    load
+
+q3.d  =>
+    d3
+
+q3.ck  =>
+    load
+
+q4.d  =>
+    d4
+
+q4.ck  =>
+    load
+
+q5.d  =>
+    d5
+
+q5.ck  =>
+    load
+
+q6.d  =>
+    d6
+
+q6.ck  =>
+    load
+
+q7.d  =>
+    d7
+
+q7.ck  =>
+    load
+
+q8.d  =>
+    d8
+
+q8.ck  =>
+    load
+
+q9.d  =>
+    d9
+
+q9.ck  =>
+    load
+
+q10.d  =>
+    d10
+
+q10.ck  =>
+    load
+
+q11.d  =>
+    d11
+
+q11.ck  =>
+    load
+
+q12.d  =>
+    d12
+
+q12.ck  =>
+    load
+
+q13.d  =>
+    d13
+
+q13.ck  =>
+    load
+
+q14.d  =>
+    d14
+
+q14.ck  =>
+    load
+
+q15.d  =>
+    d15
+
+q15.ck  =>
+    load
+
+q16.d  =>
+    d16
+
+q16.ck  =>
+    load
+
+q17.d  =>
+    d17
+
+q17.ck  =>
+    load
+
+q18.d  =>
+    d18
+
+q18.ck  =>
+    load
+
+q19.d  =>
+    d19
+
+q19.ck  =>
+    load
+
+q20.d  =>
+    d20
+
+q20.ck  =>
+    load
+
+q21.d  =>
+    d21
+
+q21.ck  =>
+    load
+
+q22.d  =>
+    d22
+
+q22.ck  =>
+    load
+
+q23.d  =>
+    d23
+
+q23.ck  =>
+    load
+
+q24.d  =>
+    d24
+
+q24.ck  =>
+    load
+
+q25.d  =>
+    d25
+
+q25.ck  =>
+    load
+
+q26.d  =>
+    d26
+
+q26.ck  =>
+    load
+
+q27.d  =>
+    d27
+
+q27.ck  =>
+    load
+
+%END

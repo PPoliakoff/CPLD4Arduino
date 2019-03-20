@@ -1,0 +1,43 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sun Feb 24 15:53:36 2019
+
+LISTING FOR SIMULATION FILE: EX3SHIFT.si
+
+   1: Name     EX3_CPLD_shiftregister;
+   2: PartNo   00;
+   3: Date     2/18/2019;
+   4: Revision 01;
+   5: Designer Engineer;
+   6: Company  ppol42;
+   7: Assembly None;
+   8: Location ;
+   9: Device   f1504ispplcc44;
+  10: 
+  11: 
+  12: ORDER: clock, data, load, d0, d1, d2, d3, d4, d5, d6, d7, q0, q1, q2, q3, q4, q5, q6, q7; 
+  13: 
+  14: 
+
+============================
+      c                     
+      ldl                   
+      oao                   
+      ctaddddddddqqqqqqqq   
+      kad0123456701234567   
+============================
+0001: 010LLLLLLLLLLLLLLLL
+0002: 110HLLLLLLLLLLLLLLL
+0003: 000HLLLLLLLLLLLLLLL
+0004: 100LHLLLLLLLLLLLLLL
+0005: 000LHLLLLLLLLLLLLLL
+0006: 100LLHLLLLLLLLLLLLL
+0007: 000LLHLLLLLLLLLLLLL
+0008: 100LLLHLLLLLLLLLLLL
+0009: 000LLLHLLLLLLLLLLLL
+0010: 100LLLLHLLLLLLLLLLL
+0011: 000LLLLHLLLLLLLLLLL
+0012: 100LLLLLHLLLLLLLLLL
+0013: 000LLLLLHLLLLLLLLLL
+0014: 001LLLLLHLLLLLLLHLL

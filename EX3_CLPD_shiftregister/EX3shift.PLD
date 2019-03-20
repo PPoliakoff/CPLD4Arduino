@@ -1,0 +1,68 @@
+Name     EX3_CPLD_shiftregister ;
+PartNo   00 ;
+Date     2/18/2019 ;
+Revision 01 ;
+Designer Engineer ;
+Company  ppol42 ;
+Assembly None ;
+Location  ;
+Device   f1504ispplcc44;
+
+/* *************** INPUT PINS *********************/
+PIN  1    = data                     ;  
+PIN  2   = clock                     ;  
+PIN  43   = load                      ;  
+
+/* *************** OUTPUT PINS *********************/
+PIN  4    = q0                        ;  
+PIN  5    = q1                        ;  
+PIN  6    = q2                        ;  
+PIN  8    = q3                        ;  
+PIN  9    = q4                        ;  
+PIN  11   = q5                        ;  
+PIN  12   = q6                        ;  
+PIN  14   = q7                        ;  
+PIN  16   = q8                        ;  
+PIN  17   = q9                        ;  
+PIN  18   = q10                       ;  
+PIN  19   = q11                       ;  
+PIN  20   = q12                       ;  
+PIN  21   = q13                       ;  
+PIN  24   = q14                       ;  
+PIN  25   = q15                       ;  
+PIN  26   = q16                       ;  
+PIN  27   = q17                       ;  
+PIN  28   = q18                       ;  
+PIN  29   = q19                       ;  
+PIN  31   = q20                       ;  
+PIN  33   = q21                       ;  
+PIN  34   = q22                       ;  
+PIN  36   = q23                       ;  
+PIN  37   = q24                       ;  
+PIN  39   = q25                       ;  
+PIN  40   = q26                       ;  
+PIN  41   = q27                       ;  
+/*PIN  44   = data_out                  ;*/
+
+/* *************** PINNODES    *********************/
+$repeat i=[0..27]
+    PINNODE {600+i}=d{i};
+$repend
+
+/* define the 28 bits shitf register */
+[d0..27].ck=clock;
+d0.d=data;
+$repeat i=[0..26]
+    d{i+1}.d=d{i};
+$repend
+/*data_out=d24;*/
+
+/* define the 28 bits data register */
+[q0..27].ck=load;
+
+$repeat i=[0..27]
+    q{i}.d =d{i};
+$repend
+
+
+
